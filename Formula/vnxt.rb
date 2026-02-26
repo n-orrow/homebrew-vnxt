@@ -1,0 +1,19 @@
+class Vnxt < Formula
+  desc "Automated semantic version bumping CLI tool with changelog generation and git integration"
+  homepage "https://vnxt.dev"
+  url "https://registry.npmjs.org/vnxt/-/vnxt-1.9.3.tgz"
+  version "1.9.3"
+  license "MIT"
+
+  depends_on "node"
+
+  def install
+    system "npm", "install", "-g", "vnxt@#{version}",
+           "--prefix", prefix,
+           "--ignore-scripts"
+  end
+
+  test do
+    assert_match "vnxt v#{version}", shell_output("#{bin}/vx -vv")
+  end
+end
