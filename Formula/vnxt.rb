@@ -1,8 +1,8 @@
 class Vnxt < Formula
   desc "Automated semantic version bumping CLI tool with changelog generation and git integration"
   homepage "https://vnxt.dev"
-  url "https://registry.npmjs.org/vnxt/-/vnxt-1.15.0.tgz"
-  version "1.15.0"
+  url "https://registry.npmjs.org/vnxt/-/vnxt-1.15.2.tgz"
+  version "1.15.2"
   license "MIT"
 
   depends_on "node"
